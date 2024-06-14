@@ -9,8 +9,8 @@ connectDB();
 // middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.get("/", (req, res) => {
-    res.json({ message: "server is working..." })
+app.get("/user", (req, res) => {
+    res.send("users service is working...")
 })
 app.use(Routes);
 app.listen(PORT, () => console.log(`Server is running on PORT ${PORT}`))
